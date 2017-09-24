@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+.nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease;
+    padding: 2em 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include desktop {
+        align-items: center;
+    }
+}
+
+.nav-logo {
+    h1 {
+        font-size: 3rem;
+        color: white;
+    }
+}
+
+.nav-hamburger {
+    display: block;
+    background-color: transparent;
+    border: 0;
+    @include mobile-l {
+        justify-content: flex-end;
+        text-align: right;
+    }
+    span {
+        width: 30px;
+        height: 3px;
+        background-color: #FFFFFF;
+        display: block;
+        transition: all 0.3s ease-in-out;
+        &:nth-of-type(3) {
+            width: 10px;
+            margin-top: 5px;
+        }
+        &:nth-of-type(2) {
+            width: 20px;
+            margin-top: 5px;
+        }
+    }
+}
+
+.toggle-activ {
+    span:nth-child(-n+3) {
+        width: 30px;
+    }
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 0;
+    background: rgb(217, 6, 71);
+    overflow: hidden;
+    transition: 1s all ease;
+    @include desktop {
+        align-items: center;
+        height: 100%;
+        flex-direction: row;
+        width: auto;
+        background: transparent;
+    }
+    li {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        align-items: center;
+        @include desktop {
+            flex-grow: 0;
+        }
+    }
+    a {
+        display: block;
+        color: white;
+        transition: 1s all ease;
+        text-transform: uppercase;
+        &:hover {
+            text-decoration: line-through;
+        }
+        @include desktop {
+            padding: .5em 2em;
+        }
+    }
+}
+
+.toggle-list {
+    height: 28em;
+}
+
+.nav-fixed {
+    background: $base-gradient;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.20);
+    padding: .2em 0;
+}
+
+.nav-fixed .nav-list {
+    background: transparent;
+}
+
+//////////////////
+@include desktop {
+    .nav-hamburger {
+        display: none;
+    }
+}

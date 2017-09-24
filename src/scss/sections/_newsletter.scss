@@ -1,0 +1,44 @@
+.newsletter {
+    border-bottom: 1px solid #e0e0e0;
+    @include desktop {
+        padding-bottom: 6em;
+    }
+}
+
+.newsletter-heading {
+    text-align: center;
+}
+
+.newsletter-title {
+    margin: 1em 0;
+}
+
+.newsletter-mail {
+    @include tablet-l {
+        display: flex;
+        padding-top: 2em;
+        position: relative;
+    }
+    @include desktop {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+.newsletter-input {
+    background: rgb(248, 248, 248);
+    border: none;
+    font-weight: 400;
+    border-radius: 25px;
+    padding: 1em 2em;
+    color: $font-color;
+    outline: 0;
+    width: 100%;
+    margin: 1em 0;
+    &:focus {
+        box-shadow: 0 0 10px 0px rgba(223, 27, 61, 0.5);
+    }
+    @include tablet-p {
+        margin: 0;
+    }
+}

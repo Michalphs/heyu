@@ -1,0 +1,71 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $heading-color;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 1.75rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+span,
+a,
+p {
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    @include mobile-l {
+        font-size: 1.4rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $heading-color;
+    outline: 0;
+    &:active {
+        text-decoration: none;
+    }
+}
+
+p {
+    color: $font-color;
+    line-height: 1.77;
+}
+
+.text-bold {
+    font-weight: 900;
+}
+
+.text-italic {
+    font-style: italic;
+}

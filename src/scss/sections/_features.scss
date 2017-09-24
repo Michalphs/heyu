@@ -1,0 +1,113 @@
+    .features {
+        background: $base-gradient;
+        h4,
+        p,
+        span {
+            color: white;
+        }
+        @include desktop {
+            padding: 0;
+            margin: 6em 0;
+        }
+    }
+    
+    .wrapper-features {
+        @include tablet-l {
+            display: flex;
+            flex-flow: row wrap;
+            position: relative;
+        }
+        @include desktop {
+            padding: 4.8em 0;
+            justify-content: space-between;
+        }
+        @media (min-width:992px) and (max-width:1024px) {
+            padding: 0;
+        }
+    }
+    
+    .features-content {
+        @include tablet-l {
+            order: 1;
+            width: 51%;
+        }
+        @include desktop {
+            order: 0;
+            width: 33%;
+        }
+    }
+    
+    .features-mockup {
+        @include tablet-l {
+            order: 2;
+            width: 40%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+        }
+        @include desktop {
+            order: 0;
+            top: -5.3em;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @media (min-width:992px) and (max-width:1024px) {
+            top: -4.5em;
+        }
+    }
+    
+    .features-mockup-image {
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .features-box {
+        padding: 2em 0;
+        @include tablet-p {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+        @include desktop {
+            align-items: flex-start;
+        }
+    }
+    
+    .features-box1,
+    .features-box2 {
+        @include desktop {
+            text-align: right;
+        }
+    }
+    
+    .features-box-content {
+        @include tablet-p {
+            order: 2;
+        }
+        @include desktop {
+            order: 0;
+        }
+    }
+    
+    .features-box-icon {
+        display: none;
+        @include tablet-p {
+            display: inline;
+            order: 1;
+            font-size: 3em;
+            padding-right: 1em;
+        }
+        @include desktop {
+            order: 0;
+            padding: 0 .5em;
+            font-size: 2.5em;
+        }
+    }
+    
+    .features-box-icon2 {
+        @include desktop {
+            order: -1;
+        }
+    }

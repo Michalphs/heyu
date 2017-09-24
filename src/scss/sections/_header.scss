@@ -1,0 +1,71 @@
+.header {
+    background: $base-gradient;
+    position: relative;
+    &:before {
+        @include desktop {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6em;
+            transform: skewY(-8deg);
+            right: 0;
+            width: 100%;
+            height: 12em;
+            background-color: rgb(255, 255, 255);
+        }
+        @include desktop-s {
+            height: 14em;
+            bottom: -7em;
+        }
+        @include desktop-m {
+            height: 18em;
+            bottom: -9em;
+        }
+        @include desktop-l {
+            transform: skewY(-6deg);
+        }
+    }
+}
+
+.header-content {
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 6em;
+    }
+}
+
+.header-content-description {
+    text-align: center;
+    padding: 5em 0;
+    @include desktop {
+        text-align: left;
+    }
+    h1,
+    p {
+        @include desktop {
+            margin: 0;
+        }
+        margin: 1em 0;
+        color: #FFFFFF;
+    }
+    p {
+        @include desktop {
+            padding-bottom: 3em;
+        }
+    }
+}
+
+.header-mockup {
+    display: none;
+    @include desktop {
+        display: block;
+    }
+}
+
+.header-mockup-image {
+    @include desktop {
+        max-width: 100%;
+    }
+}

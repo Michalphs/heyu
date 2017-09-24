@@ -1,0 +1,74 @@
+.testimonals {
+    border-bottom: 1px solid #e0e0e0;
+    @include desktop {
+        margin-bottom: 6em;
+        border: 0;
+    }
+}
+
+.testimonals-content {
+    margin-top: 1em;
+    @include tablet-l {
+        display: flex;
+    }
+}
+
+.testimonals-title {
+    text-align: center;
+}
+
+.testimonals-box {
+    padding: 2.5em 0;
+}
+
+.testimonals-box-content {
+    padding: 2em;
+    position: relative;
+    transition: 500ms all ease;
+    &::after {
+        content: " ";
+        top: 100%;
+        left: 10%;
+        border: solid transparent;
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-top-color: #FFFFFF;
+        border-width: 10px;
+        margin-left: -10px;
+    }
+    &:hover {
+        box-shadow: 0px 15px 37px 3px rgba(0, 0, 0, 0.2);
+        transform: translateY(-1em);
+    }
+}
+
+.testimonals-visit-page {
+    color: $red;
+    font-weight: 900;
+    display: inline-block;
+    padding-top: 1em;
+}
+
+.testimonals-author {
+    display: flex;
+    align-items: center;
+    margin-top: 2em;
+    @include desktop {
+        padding-left: .75em;
+    }
+}
+
+.testimonals-author-information {
+    margin-left: 1em;
+}
+
+.testimonals-author-name {
+    font-weight: 600;
+    color: #000000;
+}
+
+.testimonals-author-work {
+    text-transform: uppercase;
+}
