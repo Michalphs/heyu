@@ -1,5 +1,5 @@
 .messages {
-    border-bottom: 1px solid #e0e0e0;
+    @include border;
 }
 
 .messages-content {
@@ -14,9 +14,9 @@
     @include desktop {
         width: 50%;
     }
-    h2 {
-        padding-bottom: .5em;
-    }
+}
+.box-description-title {
+    padding-bottom: .5em;
 }
 
 .message-box-description {

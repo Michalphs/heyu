@@ -1,5 +1,5 @@
 .newsletter {
-    border-bottom: 1px solid #e0e0e0;
+    @include border;
     @include desktop {
         padding-bottom: 6em;
     }
@@ -26,7 +26,7 @@
 }
 
 .newsletter-input {
-    background: rgb(248, 248, 248);
+    background: #F5F5F5;
     border: none;
     font-weight: 400;
     border-radius: 25px;

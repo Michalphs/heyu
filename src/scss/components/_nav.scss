@@ -1,7 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
 .nav {
     position: fixed;
     left: 0;
@@ -24,7 +20,7 @@
 .nav-logo {
     h1 {
         font-size: 3rem;
-        color: white;
+        color: $white;
     }
 }
 
@@ -39,7 +35,7 @@
     span {
         width: 30px;
         height: 3px;
-        background-color: #FFFFFF;
+        background-color: $white;
         display: block;
         transition: all 0.3s ease-in-out;
         &:nth-of-type(3) {
@@ -87,7 +83,7 @@
     }
     a {
         display: block;
-        color: white;
+        color: $white;
         transition: 1s all ease;
         text-transform: uppercase;
         &:hover {
@@ -110,7 +106,7 @@
 }
 
 .nav-fixed .nav-list {
-    background: transparent;
+    background: transpare nt;
 }
 
 //////////////////

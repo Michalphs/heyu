@@ -1,16 +1,13 @@
     .features {
         background: $base-gradient;
-        h4,
-        p,
-        span {
-            color: white;
-        }
         @include desktop {
             padding: 0;
             margin: 6em 0;
         }
     }
-    
+    .features-box-title,.features-box-text,.lnr {
+        color: $white;
+    }
     .wrapper-features {
         @include tablet-l {
             display: flex;

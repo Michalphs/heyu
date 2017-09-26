@@ -19,18 +19,23 @@
         flex-grow: 1;
     }
     a {
-        @include tablet-l {
+        @include tablet-p {
             display: block;
             padding: 20px 0;
             text-transform: uppercase;
+        }
+        &:hover {
+            color: $red;
         }
     }
 }
 
 .footer-select {
     font-size: 1em;
+    padding: 1em 0;
     border: 0;
     text-align: center;
+    cursor: pointer;
     appearance: none;
     position: relative;
     padding-right: 40px;
@@ -38,4 +43,7 @@
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     background: transparent url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-24.png") no-repeat right center;
+    @include tablet-p {
+        padding: 0 auto;
+    }
 }

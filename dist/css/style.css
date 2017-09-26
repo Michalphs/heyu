@@ -172,13 +172,12 @@ p {
 
 a {
   text-decoration: none;
-  color: #363636;
-  outline: 0; }
+  color: #363636; }
   a:active {
     text-decoration: none; }
 
 p {
-  color: #808080;
+  color: gray;
   line-height: 1.77; }
 
 .text-bold {
@@ -263,17 +262,17 @@ section {
   @media (min-width: 992px) {
     .header-content-description {
       text-align: left; } }
-  .header-content-description h1,
-  .header-content-description p {
-    margin: 1em 0;
-    color: #FFFFFF; }
-    @media (min-width: 992px) {
-      .header-content-description h1,
-      .header-content-description p {
-        margin: 0; } }
+
+.header-content-title, .header-content-text {
+  margin: 1em 0;
+  color: white; }
   @media (min-width: 992px) {
-    .header-content-description p {
-      padding-bottom: 3em; } }
+    .header-content-title, .header-content-text {
+      margin: 0; } }
+
+@media (min-width: 992px) {
+  .header-content-text {
+    padding-bottom: 3em; } }
 
 .header-mockup {
   display: none; }
@@ -286,7 +285,7 @@ section {
     max-width: 100%; } }
 
 .messages {
-  border-bottom: 1px solid #e0e0e0; }
+  border-bottom: 1px solid #E0E0E0; }
 
 @media (min-width: 992px) {
   .messages-content {
@@ -301,8 +300,9 @@ section {
   @media (min-width: 992px) {
     .message-box-content {
       width: 50%; } }
-  .message-box-content h2 {
-    padding-bottom: .5em; }
+
+.box-description-title {
+  padding-bottom: .5em; }
 
 @media (min-width: 992px) {
   .message-box-description {
@@ -351,7 +351,7 @@ section {
   z-index: -1; }
 
 .testimonals {
-  border-bottom: 1px solid #e0e0e0; }
+  border-bottom: 1px solid #E0E0E0; }
   @media (min-width: 992px) {
     .testimonals {
       margin-bottom: 6em;
@@ -386,7 +386,7 @@ section {
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-top-color: #FFFFFF;
+    border-top-color: white;
     border-width: 10px;
     margin-left: -10px; }
   .testimonals-box-content:hover {
@@ -428,14 +428,13 @@ section {
   background: -webkit-gradient(linear, left bottom, left top, from(#eb402c), to(#d90647));
   background: -o-linear-gradient(bottom, #eb402c 0%, #d90647 100%);
   background: linear-gradient(360deg, #eb402c 0%, #d90647 100%); }
-  .features h4,
-  .features p,
-  .features span {
-    color: white; }
   @media (min-width: 992px) {
     .features {
       padding: 0;
       margin: 6em 0; } }
+
+.features-box-title, .features-box-text, .lnr {
+  color: white; }
 
 @media (min-width: 768px) {
   .wrapper-features {
@@ -565,7 +564,7 @@ section {
             order: -1; } }
 
 .newsletter {
-  border-bottom: 1px solid #e0e0e0; }
+  border-bottom: 1px solid #E0E0E0; }
   @media (min-width: 992px) {
     .newsletter {
       padding-bottom: 6em; } }
@@ -590,12 +589,12 @@ section {
     margin: 0 auto; } }
 
 .newsletter-input {
-  background: #f8f8f8;
+  background: #F5F5F5;
   border: none;
   font-weight: 400;
   border-radius: 25px;
   padding: 1em 2em;
-  color: #808080;
+  color: gray;
   outline: 0;
   width: 100%;
   margin: 1em 0; }
@@ -607,7 +606,7 @@ section {
       margin: 0; } }
 
 .download {
-  border-bottom: 1px solid #e0e0e0; }
+  border-bottom: 1px solid #E0E0E0; }
 
 .download-heading {
   text-align: center;
@@ -616,9 +615,8 @@ section {
 .download-title {
   padding-bottom: .5em; }
 
-.download-icon-appstore img {
-  margin: 0 auto;
-  text-align: center; }
+.download-icon-img {
+  margin: 0 auto; }
 
 .download-icon {
   background: -webkit-gradient(linear, left bottom, left top, from(#eb402c), to(#d90647));
@@ -641,7 +639,7 @@ section {
 .download-icon-letter {
   font-size: 5rem;
   font-weight: 900;
-  color: #ffffff;
+  color: white;
   text-transform: uppercase; }
 
 .footer-content {
@@ -674,16 +672,20 @@ section {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1; }
-  @media (min-width: 768px) {
+  @media (min-width: 600px) {
     .nav-list-2 a {
       display: block;
       padding: 20px 0;
       text-transform: uppercase; } }
+  .nav-list-2 a:hover {
+    color: #eb402c; }
 
 .footer-select {
   font-size: 1em;
+  padding: 1em 0;
   border: 0;
   text-align: center;
+  cursor: pointer;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -693,10 +695,9 @@ section {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   background: transparent url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-24.png") no-repeat right center; }
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  @media (min-width: 600px) {
+    .footer-select {
+      padding: 0 auto; } }
 
 .nav {
   position: fixed;
@@ -741,7 +742,7 @@ section {
   .nav-hamburger span {
     width: 30px;
     height: 3px;
-    background-color: #FFFFFF;
+    background-color: white;
     display: block;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -830,11 +831,14 @@ section {
   padding: .2em 0; }
 
 .nav-fixed .nav-list {
-  background: transparent; }
+  background: transpare nt; }
 
 @media (min-width: 992px) {
   .nav-hamburger {
     display: none; } }
+
+button {
+  cursor: pointer; }
 
 .btn {
   padding: .75em 2.5em;
@@ -853,7 +857,6 @@ section {
   width: 100%;
   -webkit-box-shadow: 0px 10px 30px 0px rgba(223, 27, 61, 0.3);
           box-shadow: 0px 10px 30px 0px rgba(223, 27, 61, 0.3);
-  outline: none;
   color: white;
   background: -webkit-gradient(linear, left bottom, left top, from(#eb402c), to(#d90647));
   background: -o-linear-gradient(bottom, #eb402c 0%, #d90647 100%);

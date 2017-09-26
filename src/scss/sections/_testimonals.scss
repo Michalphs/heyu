@@ -1,5 +1,5 @@
 .testimonals {
-    border-bottom: 1px solid #e0e0e0;
+    @include border;
     @include desktop {
         margin-bottom: 6em;
         border: 0;
@@ -34,7 +34,7 @@
         width: 0;
         position: absolute;
         pointer-events: none;
-        border-top-color: #FFFFFF;
+        border-top-color: $white;
         border-width: 10px;
         margin-left: -10px;
     }
